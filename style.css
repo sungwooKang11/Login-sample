@@ -56,8 +56,16 @@ input:focus {
 }
 
 .question {
+    background-color: #373e46;
     color: aliceblue;
     font-size: 15px;
     margin-top: 34px;
     margin-bottom: 34px;
+    border: none;
+}
+
+.question:hover {
+    box-shadow: 5px 5px 5px black;
+    top: -5px;
+    left: -5px;
 }
