@@ -40,7 +40,7 @@ input:focus {
     outline: none;
 }
 
-.create {
+.createBtn {
     width: 250px; height: 40px;
     background-color: #0291cc;
     color: white;
@@ -49,7 +49,7 @@ input:focus {
     border-radius: 20px;
 }
 
-.create:hover {
+.createBtn:hover {
     border: 2px solid #0291cc;
     color: #0291cc;
     background-color: #373e46;
