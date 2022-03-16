@@ -1,32 +1,34 @@
-const email = document.querySelector(".email");
-const nickName = document.querySelector(".nickname");
-const passWord = document.querySelector(".password");
-const confirmVal = document.querySelector(".confirm");
-const createBtn = document.querySelector(".createBtn");
+const email = document.querySelector(".email"); //이메일
+const nickName = document.querySelector(".nickname"); //아이디
+const passWord = document.querySelector(".password"); //입력 비밀번호
+const confirmVal = document.querySelector(".confirm"); //확인 비밀번호
+const createBtn = document.querySelector(".createBtn"); //계정 생성 버튼
 
-const confirmedPW = "";
+let confirmedResult = false; //비밀번호 확인결과값
 
-const getValue = () => {
+const getValue = () => { //계정 객체 생성
     const info1 = {Email: email.value};
     const info2 = {id: nickName.value};
     const info3 = {pw: passWord.value};
-    const info4 = {check: confirmedPW};
-
+    const info4 = {check: confirmedResult};
+    
     const account = {
         ...info1, 
         ...info2,
         ...info3,
         ...info4
     };
+    function confirmPW() { //비밀번호 확인 처리
+        if (passWord.value === confirmVal.value) {
+            account[check] = true;
+            alert("Good");
+        }else {
+            alert("Check your PW");
+        }
+    };
     console.log(account);
+    createBtn.addEventListener("click", confirmPW);
 };
 
-const confirmPW = () => {
-    if (passWord === confirmVal) {
-        confirmedPW = "true";
-    }else {
-        confirmedPW = "false";
-    }
-}
 
 createBtn.addEventListener("click", getValue);
