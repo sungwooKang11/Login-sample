@@ -4,7 +4,6 @@ const nickName = document.querySelector(".nickname"); //아이디
 const passWord = document.querySelector(".password"); //입력 비밀번호
 const confirmVal = document.querySelector(".confirm"); //확인 비밀번호
 const createBtn = document.querySelector(".createBtn"); //계정 생성 버튼
-const spareBtn = document.querySelector(".question");
 
 const getValue = () => { //계정 객체 생성 
     const info1 = {Email: email.value};
