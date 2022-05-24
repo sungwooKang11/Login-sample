@@ -1,4 +1,4 @@
-const usher = document.querySelector(".usher"); //안내문
+const mention = document.querySelector(".mention"); //안내문
 const email = document.querySelector(".email"); //이메일
 const nickName = document.querySelector(".nickname"); //아이디
 const passWord = document.querySelector(".password"); //입력 비밀번호
@@ -18,19 +18,14 @@ const getValue = () => { //계정 객체 생성
         ...info3,
         ...info4
     };
+    console.log(account);
 
     if (passWord.value === confirmVal.value) {
             account.CheckPW = true;
             alert("Successfully created!");
-            email.classList.add("hidden");
-            confirmVal.classList.add("hidden");
-            usher.innerText = "Please Login your account!";
-            createBtn.innerText = "Log in";
-            spareBtn.innerText = "Don't you have an account?";
     }else {
             alert("Check your PW");
     };
-    console.log(account);
 };
 
 createBtn.addEventListener("click", getValue);
